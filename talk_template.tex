@@ -1,0 +1,171 @@
+%% Description: This is my template document for creating a slide show
+%% with LaTeX and its beamer package.
+%%
+%% To generate a pdf file use "pdflatex <FILENAME>" after adding the
+%% linked image file (http://creativecommons.org/about/downloads) to a
+%% subdirectory called "images" or removing the image tages
+%% ("\includegraphics").
+%%
+%% The template is CC0 while my talks are usually CC-BY licensed.
+%%
+%% Published by Konrad Förstner CC0 (Creative Commons Zero)
+%% No Rights Reserved
+%% http://creativecommons.org/publicdomain/zero/1.0/
+%% 
+%% To the extent possible under law, Konrad Förstner has waived all
+%% copyright and related or neighboring rights to this work. This
+%% work is published from Germany.
+
+\documentclass{beamer}
+\usepackage{beamerthemesplit}
+\usepackage[latin1]{inputenc}
+\usepackage{graphics}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{wasysym}
+
+\usetheme{Antibes}
+%% Alternative themes:
+%\usetheme{Berlin}
+%\usetheme{Boadilla}
+%\usetheme{Madrid}
+%\usetheme{Warsaw}
+
+\usecolortheme{crane}
+%% Alternative color themes:
+%\usecolortheme{lily}
+%\usecolortheme{seagull}
+
+%% Blocks that are not yet there are show transperently.
+\setbeamercovered{transparent}
+
+%% Define the headline
+\setbeamertemplate{headline}{
+  \begin{beamercolorbox}{section in head/foot}
+    \vskip2pt\insertnavigation{\paperwidth}\vskip2pt
+  \end{beamercolorbox}
+}
+
+%% Clean the footline
+\setbeamertemplate{footline}{
+%  #\insertframeendpage
+}
+
+\begin{document}
+\title{\large The ... of ...}
+
+%% If you like to include a logo (on the right side of the botton)
+%% specify it here. You can use PNGs with transparent background.
+%\logo{\includegraphics[height=0.5cm]{images/my_logo.png}}
+
+\author{
+  {\small Dr. Konrad U. Förstner\\}
+}
+\date{{\footnotesize date @ location
+}
+  \ \\
+  \ \\
+  %% Get the logo from here http://creativecommons.org/about/downloads
+  %% and put it into a subfolder called images
+  \includegraphics[width=0.88cm]{images/creative_commons_attribute.png}
+}  
+
+\begin{frame}
+  \titlepage 
+\end{frame}
+
+\begin{frame}
+  \frametitle{Table of content}
+  \tableofcontents 
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section[If something else should be in the TOC]{Name of the Section}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% Include a TOC that shows the current section highlighted
+\begin{frame}
+  \frametitle{Table of content}
+  \tableofcontents[currentsection]
+\end{frame}
+
+%% Add a background image 
+% \setbeamertemplate{background}{
+%  \includegraphics[
+%    width=\paperwidth,height=\paperheight]
+%                  {images/FILENAME.jpg}
+% }
+%% It's good practice to add the source of the image 
+% Source: URL 
+\begin{frame}
+    \frametitle{Title of the Slide}
+    \begin{block}{Title of a block}
+      \begin{itemize}
+      \item Something
+      \item Something else
+      \end{itemize}
+    \end{block}
+\end{frame}
+%% To reset the background image - otherwise the previously set one
+%% will be used.
+\setbeamertemplate{background}[default]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Link collections}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+  \frametitle{Selected links}
+   {\tiny
+     \begin{block}{}
+       \begin{itemize}
+       \item \url{http://creativecommons.org}
+      \end{itemize}
+  \end{block}
+}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%
+\section*{Sources}
+%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+  \frametitle{Image sources/attribution}
+   {\tiny
+     \begin{block}{}
+       \begin{itemize}
+       \item \url{http://www.flickr.com/photos/konradfoerstner/4634880593/}
+      \end{itemize}
+  \end{block}
+}
+\end{frame}
+
+\begin{frame}
+  \frametitle{About this document} 
+  \begin{center}
+    {\tiny
+      Created in \href{http://www.latex-project.org}{\LaTeX} using the
+      \href{http://latex-beamer.sourceforge.net}{\textit{beamer}
+        class}, \href{http://www.tug.org/texlive/}{\textit{TeX Live}} and
+      \href{http://www.gnu.org/software/emacs}{\textit{Emacs}}.\\ \ \\
+
+      %% Get the logo from here http://creativecommons.org/about/downloads
+      %% and put it into a subfolder called images      
+      \includegraphics[width=0.88cm]{images/creative_commons_attribute.png}
+      \ \\ \ \\
+      Published under the Creative Commons Attribution 3.0 License\\
+      \url{http://creativecommons.org/licenses/by/3.0/de/}\\
+      by Konrad Förstner\\ 
+      \url{http://konrad.foerstner.org}\\ \ \\
+  }
+  %% Adapt this version and date
+  {\tiny \textcolor{black}{Document version 1.0 2010/04/21}}
+
+  \end{center}
+\end{frame}
+
+\end{document}
+
+
+
+
