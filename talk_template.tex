@@ -110,6 +110,16 @@
 %% will be used.
 \setbeamertemplate{background}[default]
 
+\begin{frame}[fragile] % need this fragile to work
+    \frametitle{A slide with verbatim environment}
+    \begin{block}{}
+      \begin{verbatim}
+  $ pdflatex talk_template.tex
+  $ xpdf talk_template.pdf
+    \end{verbatim}
+    \end{block}
+\end{frame}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section*{Link collections}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
